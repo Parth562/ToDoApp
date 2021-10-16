@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='./login.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      title #{title}
+  
+  body
+    .login
+      p Login to continue
+      form#login__form
+          label(for="email" ) Email 
+          input(type='email' placeholder='Email' required)
+          label(for="password") Password 
+          input(type='password' placeholder='enter your password' required)
+          button(type='submit') Login
+      
+      p Don't have an account?
+        a(href='/signup') signUp 
+
+  script(type='module' src='/js/index.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js')

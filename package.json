@@ -1,0 +1,28 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "bcryptjs": "^2.4.3",
+    "bundle-js": "^1.0.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.11",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "validator": "^13.6.0"
+  }
+}

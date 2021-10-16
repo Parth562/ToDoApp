@@ -1,0 +1,36 @@
+mixin TodoListItem(name , idx)
+  .todo-div 
+      .circle
+      p #{name}
+      img#cross_button.cross(src='images/icon-cross.svg')
+
+
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='./index.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      title #{title}
+  
+  body
+    // HEADER
+    div.header
+      h2 Welcome #{user.name}
+      button#logout__button Logout
+    
+    h1 ToDo 
+    div.todo-div.topDiv
+      form#task__form
+        input(type='text' placeholder='Add Something....' required)
+        button(type='submit')
+    
+    each item , idx in taskList
+      +TodoListItem(`${item}` , `${idx}`)
+    
+
+  script(type='module' src='/js/index.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js')
+
